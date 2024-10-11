@@ -1,0 +1,583 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <title>
+            Список достопремечательностей
+        </title>
+    </head>
+
+    <body link="Black" alink="Black" vlink="Black">
+      <h4>Меню:</h4>
+      <p bgcolor="green">
+        <font color="white"><a href=".\Сайт.html">Главная страница</a></font><br>
+        <font color="white"><a href="#" title="Пока не работает" >Инфомация о крае</a></font><br>
+        <font color="white"><a href="#" title="Пока не работает">Информация о городах</a></font><br>
+        <font color="white"><a href=".\СписокДостопримечательностей.html">Список достопримечательностей</a></font><br>
+        <font color="white"><a href=".\Достопримечательности.html">Информация о достопримечательностях</a></font>
+      </p>
+
+          <form>
+            <details>
+              <summary>
+                Настройки таблицы
+              </summary>
+              <fieldset>
+                <h3>Фильтры</h3>
+
+                <Label>Название:
+                  <input type="text" id="name">
+                </Label><br><br>
+
+                <labeL for="nature">Естественные?</labeL>
+                <select name="nature">
+                  <option value="0">-----</option>
+                  <option value="1">Да</option>
+                  <option value="2">Нет</option>
+                </select><br><br>
+
+                <labeL>Тип:
+                  <input type="text" id="ty">
+                </labeL><br><br>
+
+                <labeL>Территория:
+                  <input type="text" id="ter">
+                </labeL><br><br>
+
+                <labeL for="Age">Год определен?</labeL>
+
+                <select name="Age">
+                  <option value="0">-----</option>
+                  <option value="1">Да</option>
+                  <option value="2">Нет</option>
+                </select><br><br>
+                
+                <label>Возраст:
+                  от <input type="number" min="0" id="vozot"> до <input type="number" min="0" id="vozdo">
+               </label><br><br>
+
+                <label>Размер:
+                   от <input type="number" min="0" id="razmot"> до <input type="number" min="0" id="razmdo">
+                </label><br><hr>
+
+                
+
+                <h3>Сортировка</h3>
+
+                <label>Первый уровень: 
+                  <select name="sort1">
+                    <option value="0">Нет</option>
+                    <option value="1">Год</option>
+                    <option value="2">Название</option>
+                    <option value="3">Территория</option>
+                    <option value="4">Размер</option> 
+                  </select>
+                   По убыванию? <input type="checkbox" name="sort1ubv" value="0">
+                </label><br><br>
+
+                <label>Второй уровень: 
+                  <select name="sort2">
+                    <option value="0">Нет</option>
+                    <option value="1">Год</option>
+                    <option value="2">Название</option>
+                    <option value="3">Территория</option>
+                    <option value="4">Размер</option> 
+                  </select>
+                   По убыванию? <input type="checkbox" name="sort2ubv" value="0">
+                </label><br><br>
+
+                <label>Третий уровень: 
+                  <select name="sort3">
+                    <option value="0">Нет</option>
+                    <option value="1">Год</option>
+                    <option value="2">Название</option>
+                    <option value="3">Территория</option>
+                    <option value="4">Размер</option> 
+                  </select>
+                   По убыванию? <input type="checkbox" name="sort3ubv" value="0">
+                </label><br><hr>
+
+                <h3>Графики</h3>
+
+                <h4>Значение по оси OX</h4>
+
+                <input type="radio" name="OX" value="type">Тип<br>
+                <input type="radio" name="OX" value="territory">Территория<br>
+                
+                <h4>Значение по оси OY</h4>
+
+                <input type="checkbox" name="OY" value="AgeMax">Самое молодая достопримечательность(год)<br>
+                <input type="checkbox" name="OY" value="AgeMin">Самая старая достопримечательность(год)<br>
+                <input type="checkbox" name="OY" value="SizeMin">Самая маленькая достопримечательность<br>
+                <input type="checkbox" name="OY" value="SizeMax">Самая большая достопримечательность<br>
+                <input type="checkbox" name="OY" value="Average">Средний размер<br>
+
+              </fieldset>
+            </details>
+          </form><br>
+
+          <table border="1" cellspacing="0" width="100%">
+            <tr>
+                <th>Название</th>
+                <th>Искусственный</th>
+                <th>Тип</th>
+                <th>Территория/<br>Ближайший населенный пункт</th>
+                <th>Год</th>
+                <th>Размер(км<sup>2</sup>)</th>
+            </tr>
+
+            <tbody align="center">
+              <tr>
+                <td>Река Амур</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Хабаровский край</td>
+                <td>-</td>
+                <td>1 856 000</td>
+              </tr>
+
+              <tr>
+                <td>Хабаровский мост</td>
+                <td>Да</td>
+                <td>Мост</td>
+                <td>Хабаровск</td>
+                <td>1916</td>
+                <td>0.09638</td>
+              </tr>
+              
+              <tr>
+                <td>Озеро Лотосов</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Галкино</td>
+                <td>-</td>
+                <td>0.2975</td>
+              </tr>
+
+              <tr>
+                <td>Шантарские острова</td>
+                <td>Нет</td>
+                <td>Остров</td>
+                <td>Тугуро-Чумиканский район</td>
+                <td>-</td>
+                <td>2500</td>
+              </tr>
+
+              <tr>            
+                <td>Петроглифы Сикачи-Аляна</td>
+                <td>Да</td>
+                <td>Архиологическое</td>
+                <td>Сикачи-Алян</td>
+                <td>-11000</td>
+                <td>0</td>
+              </tr>
+
+              <tr>      
+                <td>Сизиманский каменный лес</td>
+                <td>Нет</td>
+                <td>Природное образование</td>
+                <td>Бухта Сизиман</td>
+                <td>-33000000</td>
+                <td>2</td>
+              </tr>
+
+              <tr>      
+                <td>Дальневосточный художественный музей</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Хабаровск</td>
+                <td>1931</td>
+                <td>0.032572</td>
+              </tr>
+
+              <tr>      
+                <td>Сукпайская писаница</td>
+                <td>Да</td>
+                <td>Археологическое</td>
+                <td>Сукпай</td>
+                <td>-500</td>
+                <td>0.0001</td>
+              </tr>
+
+              <tr>      
+                <td>Байкало-Амурская магистраль</td>
+                <td>Да</td>
+                <td>Железная дорога</td>
+                <td>Хабаровский край</td>
+                <td>1989</td>
+                <td>6.536</td>
+              </tr>
+
+              <tr>      
+                <td>Амурский утес</td>
+                <td>Да</td>
+                <td>Музей/<br>Смотровая площадка</td>
+                <td>Хабаровск</td>
+                <td>1858</td>
+                <td>0.1</td>
+              </tr>
+
+              <tr>      
+                <td>Набережная адмирала Невельского</td>
+                <td>Да</td>
+                <td>Набережная</td>
+                <td>Хабаровск</td>
+                <td>1913</td>
+                <td>0.2</td>
+              </tr>
+
+              <tr>      
+                <td>Хребет Дуссе-Алинь</td>
+                <td>Нет</td>
+                <td>Хребет</td>
+                <td>Хабаровский край</td>
+                <td>-</td>
+                <td>45</td>
+              </tr>
+
+              <tr>      
+                <td>Амурские столбы</td>
+                <td>Нет</td>
+                <td>Скалы</td>
+                <td>Нижнетамбовское</td>
+                <td>-1000000</td>
+                <td>0</td>
+              </tr>
+
+              <tr>      
+                <td>Озеро Амут</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Солнечный район</td>
+                <td>-</td>
+                <td>0.0585</td>
+              </tr>
+
+              <tr>      
+                <td>Анюйский национальный парк</td>
+                <td>Нет</td>
+                <td>Национальный парк</td>
+                <td>Нанайский район</td>
+                <td>-</td>
+                <td>4290</td>
+              </tr>
+
+              <tr>      
+                <td>Хребет Сихотэ-Алинь</td>
+                <td>Нет</td>
+                <td>Хребет</td>
+                <td>Хабаровский край</td>
+                <td>-</td>
+                <td>300000</td>
+              </tr>
+
+              <tr>      
+                <td>Озеро Болонь</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Амурский район</td>
+                <td>-</td>
+                <td>399</td>
+              </tr>
+
+              <tr>      
+                <td>Сихотэ-Алиньский заповедник</td>
+                <td>Нет</td>
+                <td>Заповедник</td>
+                <td>Хабаровский край</td>
+                <td>1935</td>
+                <td>4016</td>
+              </tr>
+
+              <tr>      
+                <td>Остров Большой Уссурийский</td>
+                <td>Нет</td>
+                <td>Остров</td>
+                <td>Хабаровск</td>
+                <td>-</td>
+                <td>326</td>
+              </tr>
+
+              <tr>
+                <td>Озеро Ханка</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Пограничный район</td>
+                <td>-</td>
+                <td>4 190</td>
+              </tr>
+              
+              <tr>
+                <td>Удыльский заказник</td>
+                <td>Нет</td>
+                <td>Заказник</td>
+                <td>Ульчский район</td>
+                <td>1985</td>
+                <td>22 000</td>
+              </tr>
+              
+              <tr>
+                <td>Остров Тиртиль</td>
+                <td>Нет</td>
+                <td>Остров</td>
+                <td>Амурский лиман</td>
+                <td>-</td>
+                <td>40</td>
+              </tr>
+              
+              <tr>
+                <td>Музей имени Н. И. Гродекова</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Хабаровск</td>
+                <td>1894</td>
+                <td>0.005</td>
+              </tr>
+              
+              <tr>
+                <td>Большехехцирский заповедник</td>
+                <td>Нет</td>
+                <td>Заповедник</td>
+                <td>Хабаровский край</td>
+                <td>1963</td>
+                <td>455</td>
+              </tr>
+              
+              <tr>
+                <td>Урочище Удыль</td>
+                <td>Нет</td>
+                <td>Ландшафтный заказник</td>
+                <td>Ульчский район</td>
+                <td>1975</td>
+                <td>22 000</td>
+              </tr>
+              
+              <tr>
+                <td>Гора Тыркан</td>
+                <td>Нет</td>
+                <td>Гора</td>
+                <td>Тугуро-Чумиканский район</td>
+                <td>-</td>
+                <td>1.5</td>
+              </tr>
+              
+              <tr>
+                <td>Николаевский собор</td>
+                <td>Да</td>
+                <td>Собор</td>
+                <td>Хабаровск</td>
+                <td>2004</td>
+                <td>0.002</td>
+              </tr>
+              
+              <tr>
+                <td>Кур-Урмийский заказник</td>
+                <td>Нет</td>
+                <td>Заказник</td>
+                <td>Нанайский район</td>
+                <td>1987</td>
+                <td>1 430</td>
+              </tr>
+              
+              <tr>
+                <td>Верхнеамгуньский заповедник</td>
+                <td>Нет</td>
+                <td>Заповедник</td>
+                <td>Николаевский район</td>
+                <td>1975</td>
+                <td>1 620</td>
+              </tr>
+              
+              <tr>
+                <td>Музей Арсеньева</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Владивосток</td>
+                <td>1890</td>
+                <td>0.004</td>
+              </tr>
+              
+              <tr>
+                <td>Площадь Ленина</td>
+                <td>Да</td>
+                <td>Площадь</td>
+                <td>Хабаровск</td>
+                <td>1950</td>
+                <td>0.005</td>
+              </tr>
+              
+              <tr>
+                <td>Озеро Орель</td>
+                <td>Нет</td>
+                <td>Водоём</td>
+                <td>Тугуро-Чумиканский район</td>
+                <td>-</td>
+                <td>120</td>
+              </tr>
+              
+              <tr>
+                <td>Заповедник Болонь</td>
+                <td>Нет</td>
+                <td>Заповедник</td>
+                <td>Амурский район</td>
+                <td>1997</td>
+                <td>70 000</td>
+              </tr>
+              
+              <tr>
+                <td>Музей естественной истории</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Комсомольск-на-Амуре</td>
+                <td>1930</td>
+                <td>0.002</td>
+              </tr>
+              
+              <tr>
+                <td>Сопка Любви</td>
+                <td>Нет</td>
+                <td>Природное образование</td>
+                <td>Хабаровск</td>
+                <td>-</td>
+                <td>0.004</td>
+              </tr>
+              
+              <tr>
+                <td>Заповедник Комсомольский</td>
+                <td>Нет</td>
+                <td>Заповедник</td>
+                <td>Комсомольский район</td>
+                <td>1935</td>
+                <td>1 500</td>
+              </tr>
+              
+              <tr>
+                <td>Пещера Сухая</td>
+                <td>Нет</td>
+                <td>Пещера</td>
+                <td>Бикинский район</td>
+                <td>-</td>
+                <td>0.002</td>
+              </tr>
+              
+              <tr>
+                <td>Усть-Амурский заказник</td>
+                <td>Нет</td>
+                <td>Заказник</td>
+                <td>Нанайский район</td>
+                <td>1987</td>
+                <td>840</td>
+              </tr>
+              
+              <tr>
+                <td>Гора Болонь</td>
+                <td>Нет</td>
+                <td>Гора</td>
+                <td>Амурский район</td>
+                <td>-</td>
+                <td>0.65</td>
+              </tr>
+              
+              <tr>
+                <td>Станция Хехцир</td>
+                <td>Да</td>
+                <td>Станция</td>
+                <td>Хабаровск</td>
+                <td>1956</td>
+                <td>0.005</td>
+              </tr>
+              
+              <tr>
+                <td>Монастырь Алексия человека Божьего</td>
+                <td>Да</td>
+                <td>Монастырь</td>
+                <td>Хабаровский край</td>
+                <td>2000</td>
+                <td>0.001</td>
+              </tr>
+              
+              <tr>
+                <td>Храм Святителя Иннокентия</td>
+                <td>Да</td>
+                <td>Храм</td>
+                <td>Комсомольск-на-Амуре</td>
+                <td>1998</td>
+                <td>0.002</td>
+              </tr>
+              
+              <tr>
+                <td>Остров Дзедзу</td>
+                <td>Нет</td>
+                <td>Остров</td>
+                <td>Амурский лиман</td>
+                <td>-</td>
+                <td>32</td>
+              </tr>
+              
+              <tr>
+                <td>Двугорбая гора</td>
+                <td>Нет</td>
+                <td>Гора</td>
+                <td>Бикинский район</td>
+                <td>-</td>
+                <td>1.2</td>
+              </tr>
+              
+              <tr>
+                <td>Центр "Амурский тигр"</td>
+                <td>Да</td>
+                <td>Заповедник</td>
+                <td>Солнечный район</td>
+                <td>2013</td>
+                <td>650</td>
+              </tr>
+              
+              <tr>
+                <td>Скалы Лягушка</td>
+                <td>Нет</td>
+                <td>Природное образование</td>
+                <td>Хабаровский край</td>
+                <td>-</td>
+                <td>0.03</td>
+              </tr>
+              
+              <tr>
+                <td>Музей "Самара"</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Хабаровск</td>
+                <td>2005</td>
+                <td>0.001</td>
+              </tr>
+              
+              <tr>
+                <td>Гора Базарная</td>
+                <td>Нет</td>
+                <td>Гора</td>
+                <td>Вяземский район</td>
+                <td>-</td>
+                <td>1.4</td>
+              </tr>
+              
+              <tr>
+                <td>Музей археологии и этнографии</td>
+                <td>Да</td>
+                <td>Музей</td>
+                <td>Николаевск-на-Амуре</td>
+                <td>1955</td>
+                <td>0.002</td>
+              </tr>
+              
+              <tr>
+                <td>Сопка Орлиная</td>
+                <td>Нет</td>
+                <td>Гора</td>
+                <td>Комсомольский район</td>
+                <td>-</td>
+                <td>0.45</td>
+              </tr>
+              
+           </tbody>
+          </table>
+    </body>
+</html>
