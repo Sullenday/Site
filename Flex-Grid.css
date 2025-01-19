@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background: #777;
+    width:100%;
+    padding: 0.1%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar {
+    padding: 0.1%;
+    width: 30%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #ddd;
+    width: 100%;
+    padding: 1%;
+    font-size: large;
+}
+
+.menu .logo {
+    font-weight: bold;
+    margin-right: 1%;
+    margin-right: 5%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    margin-right: 5%;
+}
+
+.menu a.active {
+    color: red;
+    font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    width: 98%;
+    margin:1% auto;
+    flex-wrap: wrap;
+}
+
+.main-image {
+    display: flex;
+    width: 100%;
+    max-height: 300px;
+}
+
+.sub-images {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:100%;
+    margin:0.1%
+}
+
+.sub-images img {
+    width: 99%;
+    max-height: 100px;
+    margin: 0.1%;;
+}
+
+.content {
+    display: flex;
+    width: 90%;
+    margin:2% auto;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+}
+
+.card-image {
+    width:25%;
+    max-height: 80px;
+    margin: 0.5% auto;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #777;
+    color: white;
+    padding: 10px;
+}
+
+.contacts {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .gallery {
+        display: grid;
+        grid-template-rows: auto(1fr,4);
+        grid-template-columns: 1fr;
+    }
+    
+    .sub-images {
+        display:flex;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr 1fr;
+        width:100%;
+        max-height: 100%;
+        margin:0.1%;
+    }
+
+    .sub-images img {
+        width: 100%;
+        max-height: 100%;
+        margin: 0.1%;;
+    }
+    
+    .content {
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        margin:2% auto;
+        justify-content: space-around;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 2%;
+        
+    }
+    
+    .card-image {
+        height:5%;
+        margin: 0.5% auto;
+    }
+}
